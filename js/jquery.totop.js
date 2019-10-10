@@ -140,7 +140,10 @@
 		$(window).scroll(function() {
 			if ($('html, body').is(":animated"))
 				return;
-			refresh();
+			setTimeout(function(){
+				refresh();	
+			},100)
+			
 
 		});
 
