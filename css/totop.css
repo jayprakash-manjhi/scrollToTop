@@ -67,7 +67,7 @@ p:nth-child(even) {
     border: 1px solid #333;
 }
 p:nth-child(odd) {
-    background: #7b7676;
+    background: #c3a34b;
     padding: 8px;
     border: 1px solid #333;
 }
