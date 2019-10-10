@@ -8,7 +8,7 @@
 		
 		var defaults = {
 			showToBottom: true,
-			showToPrev: true,
+			showToPrev: false,
 			link: false,
 			linkTarget: '_self',
 			toTopHtml: '<a href="#"></a>',
@@ -87,20 +87,20 @@
 					});
 				});
 			}
-			if (settings.showToPrev)
-			{
-				b_prev.click(function(e) {
-					e.preventDefault();	
-					$('html, body').animate({scrollTop:lastposition}, 
-					{
-						duration: 'slow', 
-						complete: function () {
-							lastposition = 0;
-							refresh();
-						}
-					});
-				});
-			}
+// 			if (settings.showToPrev)
+// 			{
+// 				b_prev.click(function(e) {
+// 					e.preventDefault();	
+// 					$('html, body').animate({scrollTop:lastposition}, 
+// 					{
+// 						duration: 'slow', 
+// 						complete: function () {
+// 							lastposition = 0;
+// 							refresh();
+// 						}
+// 					});
+// 				});
+// 			}
 		}
 		
 		var refresh = function () {
@@ -119,12 +119,12 @@
 
 			var DallerwindowHeight  = $(window).height();
 
-			console.log('-----------------------------------------');
-			console.log('Scroll Top Value: ', scrollTopValue);
-			console.log('$ Window Height: ', DallerwindowHeight);
-			console.log('Window Inner Height: ', windowInnerHeight);
-			console.log('Document Height: ', documentHeight);
-			console.log('Window Outer Height: ', windowOuterHeight);
+// 			console.log('-----------------------------------------');
+// 			console.log('Scroll Top Value: ', scrollTopValue);
+// 			console.log('$ Window Height: ', DallerwindowHeight);
+// 			console.log('Window Inner Height: ', windowInnerHeight);
+// 			console.log('Document Height: ', documentHeight);
+// 			console.log('Window Outer Height: ', windowOuterHeight);
 
 			$('#scrollTopValue').text(scrollTopValue);
 			$('#DallerwindowHeight').text(DallerwindowHeight);
@@ -133,20 +133,20 @@
 			$('#windowOuterHeight').text(windowOuterHeight);
 			
 			
-			if (((scrollTopValue + windowInnerHeight) >= documentHeight) || lastposition > 0) {
+			if (((scrollTopValue + windowInnerHeight) >= documentHeight)) {
 				if (b_bottom.is(":visible"))
 					b_bottom.fadeOut("slow");
 			}
 			else if (!b_bottom.is(":visible"))
 					b_bottom.fadeIn("slow");
 
-			if (lastposition>0)
-			{
-				if (!b_prev.is(":visible"))
-					b_prev.fadeIn("slow");
-			}
-			else if (b_prev.is(":visible"))
-					b_prev.fadeOut("slow");
+// 			if (lastposition>0)
+// 			{
+// 				if (!b_prev.is(":visible"))
+// 					b_prev.fadeIn("slow");
+// 			}
+// 			else if (b_prev.is(":visible"))
+// 					b_prev.fadeOut("slow");
 		}
 
 		$(window).scroll(function() {
