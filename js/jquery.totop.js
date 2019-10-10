@@ -1,6 +1,6 @@
 /*!
- jQuery scrollTopTop v1.0 - 2014-01-29
- (c) 2014 Alexandr Bannov <kokudzin@gmail.com>
+ jQuery scrollToTop v1.0 - 2019-10-10
+ (c) 2019 Jayprakash Manjhi <jayprakash.manjhi1987@gmail.com>
  license: http://www.opensource.org/licenses/mit-license.php
  */
 (function ( $ ) {
