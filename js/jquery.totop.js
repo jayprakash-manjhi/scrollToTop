@@ -114,7 +114,7 @@
 				
 			var scrollTopValue = parseInt($(window).scrollTop());
 			var windowInnerHeight = parseInt(window.innerHeight);
-			var documentHeight = parseInt($(document).height()) - 100;
+			var documentHeight = parseInt($(document).height()) - 90;
 
 			console.log('-----------------------------------------');
 			console.log('Scroll Top Value: ', scrollTopValue);
