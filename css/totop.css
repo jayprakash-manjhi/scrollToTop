@@ -44,10 +44,19 @@
 	left: 0;
 }
 
-header, footer{
+header{
 	text-align:center;
 	background: #333;
 	color: #fff;
-	padding: 16px;
-	height: 100px;
+	height: 80px;
+	line-height:80px;
+}
+
+
+footer{
+	text-align:center;
+	background: #333;
+	color: #fff;
+	height: 150px;
+	line-height: 150px;
 }
