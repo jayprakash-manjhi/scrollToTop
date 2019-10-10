@@ -111,10 +111,10 @@
 			}
 			else if (b_top.is(":visible"))
 				b_top.fadeOut("slow");
-				
+			var footerPaddedvalue = 0;	
 			var scrollTopValue = parseInt($(window).scrollTop());
 			var windowInnerHeight = parseInt(window.innerHeight);
-			var documentHeight = parseInt($(document).height()) - 90;
+			var documentHeight = parseInt($(document).height()) - footerPaddedvalue;
 
 			console.log('-----------------------------------------');
 			console.log('Scroll Top Value: ', scrollTopValue);
@@ -142,7 +142,7 @@
 				return;
 			setTimeout(function(){
 				refresh();	
-			},100)
+			},50)
 			
 
 		});
