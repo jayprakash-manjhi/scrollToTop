@@ -111,15 +111,18 @@
 			}
 			else if (b_top.is(":visible"))
 				b_top.fadeOut("slow");
-			var footerPaddedvalue = 0;	
+			var footerPaddedvalue = 50;	
 			var scrollTopValue = parseInt($(window).scrollTop());
 			var windowInnerHeight = parseInt(window.innerHeight);
 			var documentHeight = parseInt($(document).height()) - footerPaddedvalue;
+			var windowOuterHeight = window.outerHeight;
 
 			console.log('-----------------------------------------');
 			console.log('Scroll Top Value: ', scrollTopValue);
 			console.log('Window Inner Height: ', windowInnerHeight);
 			console.log('Document Height: ', documentHeight);
+			console.log('Window Outer Height: ', windowOuterHeight);
+			
 			
 			if (((scrollTopValue + windowInnerHeight) >= documentHeight) || lastposition > 0) {
 				if (b_bottom.is(":visible"))
