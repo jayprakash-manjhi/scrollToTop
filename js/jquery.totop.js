@@ -117,11 +117,20 @@
 			var documentHeight = parseInt($(document).height()) - footerPaddedvalue;
 			var windowOuterHeight = window.outerHeight;
 
+			var DallerwindowHeight  = $(window).height();
+
 			console.log('-----------------------------------------');
 			console.log('Scroll Top Value: ', scrollTopValue);
+			console.log('$ Window Height: ', DallerwindowHeight);
 			console.log('Window Inner Height: ', windowInnerHeight);
 			console.log('Document Height: ', documentHeight);
 			console.log('Window Outer Height: ', windowOuterHeight);
+
+			$('#scrollTopValue').text(scrollTopValue);
+			$('#DallerwindowHeight').text(DallerwindowHeight);
+			$('#windowInnerHeight').text(windowInnerHeight);
+			$('#documentHeight').text(documentHeight);
+			$('#windowOuterHeight').text(windowOuterHeight);
 			
 			
 			if (((scrollTopValue + windowInnerHeight) >= documentHeight) || lastposition > 0) {
