@@ -113,12 +113,14 @@
 			let lastScrollPercentage = (lastposition * 100) / documentHeight;
 			if(direction == 'top'){
 				if(settings.directTopBottomMovement) return 0;
-				let scrollTopValue = ((lastScrollPercentage - settings.scrollMovementPercentage) / 100 ) * documentHeight;
+				//let scrollTopValue = ((lastScrollPercentage - settings.scrollMovementPercentage) / 100 ) * documentHeight;
+				let scrollTopValue = lastposition - window.innerHeight;
 				scrollTopValue = scrollTopValue < 0 ? 0 : scrollTopValue;
 				return scrollTopValue;
 			}else if(direction == 'bottom'){
 				if(settings.directTopBottomMovement) return  documentHeight;
-				let scrollBotomValue = ((lastScrollPercentage + settings.scrollMovementPercentage) / 100 ) * documentHeight;
+				//let scrollBotomValue = ((lastScrollPercentage + settings.scrollMovementPercentage) / 100 ) * documentHeight;
+				let scrollBotomValue = lastposition + window.innerHeight;
 				scrollBotomValue = scrollBotomValue >= documentHeight ? documentHeight : scrollBotomValue;
 				return scrollBotomValue;
 			}
