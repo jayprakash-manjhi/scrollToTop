@@ -16,7 +16,8 @@
 			linkClass: 'totopscroller-lnk',
 			marginFromBottom: 50,
 			scrollMovementPercentage: 25,
-			directTopBottomMovement: false
+			directTopBottomMovement: false,
+			sectionReference: '#section_18'
         };
 
 		var settings = $.extend({}, defaults, options);
@@ -63,7 +64,8 @@
 			b_top.click(function(e) {
 				e.preventDefault();
 				lastposition = $(document).scrollTop();
-				let scrollTopValue = scrollMovement('top');
+				//let scrollTopValue = scrollMovement('top');
+				scrollTopValue = 0;
 				$('html, body').animate({scrollTop: scrollTopValue}, 
 				{
 					duration: 'slow', 
@@ -77,8 +79,13 @@
 				b_bottom.click(function(e) {
 					e.preventDefault();
 					//lastposition = 0;
-					lastposition = $(document).scrollTop();
-					let scrollBottomValue = scrollMovement('bottom');
+					//lastposition = $(document).scrollTop();
+					//let scrollBottomValue = scrollMovement('bottom');
+					let scrollBottomValue = $(settings.sectionReference).position().top;
+					lastposition = $(document).scrollTop()
+					if(lastposition >= scrollBottomValue){
+						scrollBottomValue = $(document).height();
+					}
 					$('html, body').animate({scrollTop: scrollBottomValue}, 
 					{
 						duration: 'slow', 
