@@ -81,7 +81,7 @@
 					//lastposition = 0;
 					//lastposition = $(document).scrollTop();
 					//let scrollBottomValue = scrollMovement('bottom');
-					let scrollBottomValue = $(settings.sectionReference).position().top;
+					let scrollBottomValue = parseInt($(settings.sectionReference).position().top);
 					lastposition = $(document).scrollTop()
 					if(lastposition >= scrollBottomValue){
 						scrollBottomValue = $(document).height();
